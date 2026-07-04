@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>일등밧데리 | 차량 부품 검색 플랫폼</title>
+  <meta name="description" content="일등밧데리 차량 부품 검색 플랫폼 V1. 브랜드, 차종, 연식, 연료를 선택해 배터리를 검색합니다.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="일등밧데리 홈">
+      <span class="brand-mark">1</span>
+      <span>일등밧데리</span>
+    </a>
+    <nav class="nav-links" aria-label="주요 메뉴">
+      <a href="search.html">배터리 검색</a>
+      <a href="admin.html">DB 관리</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero-section">
+      <div class="hero-copy">
+        <p class="eyebrow">Vehicle Parts Search Platform V1</p>
+        <h1>차량에 맞는 배터리를 빠르게 찾습니다</h1>
+        <p class="hero-text">GitHub Pages에서 바로 작동하는 JSON 기반 차량 부품 검색 플랫폼입니다. 지금은 배터리 검색부터 시작하고, 나중에 와이퍼, 필터, 오일류까지 같은 구조로 확장할 수 있습니다.</p>
+        <div class="hero-actions">
+          <a class="btn primary" href="search.html">배터리 검색하기</a>
+          <a class="btn secondary" href="admin.html">DB 관리하기</a>
+        </div>
+      </div>
+      <div class="hero-visual" aria-label="배터리 장착 이미지">
+        <img src="outputs/battery-finder/assets/battery-service-hero.png" alt="자동차 배터리 점검 이미지">
+      </div>
+    </section>
+
+    <section class="stats-section" aria-labelledby="stats-title">
+      <div>
+        <p class="eyebrow">Current Database</p>
+        <h2 id="stats-title">현재 등록된 샘플 DB</h2>
+      </div>
+      <div class="stats-grid" id="homeStats" aria-live="polite">
+        <article class="stat-card">
+          <span>브랜드</span>
+          <strong>-</strong>
+        </article>
+        <article class="stat-card">
+          <span>차량 상세</span>
+          <strong>-</strong>
+        </article>
+        <article class="stat-card">
+          <span>부품</span>
+          <strong>-</strong>
+        </article>
+        <article class="stat-card">
+          <span>매칭</span>
+          <strong>-</strong>
+        </article>
+      </div>
+    </section>
+
+    <section class="flow-section" aria-labelledby="flow-title">
+      <div class="section-heading">
+        <p class="eyebrow">Search Flow</p>
+        <h2 id="flow-title">브랜드부터 가격까지 한 번에</h2>
+      </div>
+      <div class="flow-grid">
+        <article>
+          <span>01</span>
+          <h3>브랜드 선택</h3>
+          <p>현대, 기아, 제네시스, 수입차 브랜드를 선택합니다.</p>
+        </article>
+        <article>
+          <span>02</span>
+          <h3>차종/연식/연료 선택</h3>
+          <p>차량 상세 DB와 매칭되는 조건만 순서대로 보여줍니다.</p>
+        </article>
+        <article>
+          <span>03</span>
+          <h3>배터리 결과 확인</h3>
+          <p>브랜드, 배터리명, 규격, 타입, 가격과 상담 버튼을 표시합니다.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="cta-band">
+      <div>
+        <p class="eyebrow">일등밧데리</p>
+        <h2>고객 응대용 검색 화면과 내부 관리 화면을 함께 제공합니다</h2>
+      </div>
+      <a class="btn primary" href="search.html">검색 화면 열기</a>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <span>일등밧데리 차량 부품 검색 플랫폼 V1</span>
+    <a href="tel:1644-9141">1644-9141</a>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

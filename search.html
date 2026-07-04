@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>배터리 검색 | 일등밧데리</title>
+  <meta name="description" content="브랜드, 차종, 연식, 연료를 선택해 일등밧데리 배터리 추천 결과를 확인합니다.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header compact">
+    <a class="brand" href="index.html" aria-label="일등밧데리 홈">
+      <span class="brand-mark">1</span>
+      <span>일등밧데리</span>
+    </a>
+    <nav class="nav-links" aria-label="주요 메뉴">
+      <a href="index.html">홈</a>
+      <a href="admin.html">DB 관리</a>
+    </nav>
+  </header>
+
+  <main class="page-shell">
+    <section class="page-title">
+      <p class="eyebrow">Battery Search</p>
+      <h1>차량 배터리 검색</h1>
+      <p>브랜드, 차종, 연식, 연료를 선택하면 등록된 배터리 매칭 결과를 보여줍니다.</p>
+    </section>
+
+    <section class="tool-layout">
+      <form class="search-panel" id="batterySearchForm">
+        <div class="field">
+          <label for="brandSelect">브랜드</label>
+          <select id="brandSelect" required>
+            <option value="">브랜드 선택</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="modelSelect">차종</label>
+          <select id="modelSelect" required disabled>
+            <option value="">브랜드를 먼저 선택</option>
+          </select>
+        </div>
+        <div class="field two-column">
+          <div>
+            <label for="yearSelect">연식</label>
+            <select id="yearSelect" required disabled>
+              <option value="">차종을 먼저 선택</option>
+            </select>
+          </div>
+          <div>
+            <label for="fuelSelect">연료</label>
+            <select id="fuelSelect" required disabled>
+              <option value="">연식을 먼저 선택</option>
+            </select>
+          </div>
+        </div>
+        <button class="btn primary full" type="submit">배터리 결과 보기</button>
+        <p class="helper-text" id="searchStatus" role="status" aria-live="polite">DB를 불러오는 중입니다.</p>
+      </form>
+
+      <section class="result-panel" aria-labelledby="resultTitle">
+        <div class="result-heading">
+          <p class="eyebrow">Result</p>
+          <h2 id="resultTitle">검색 결과</h2>
+        </div>
+        <div class="empty-state" id="emptyState">
+          <strong>차량 정보를 선택해 주세요.</strong>
+          <p>선택한 차량에 연결된 배터리 결과가 이곳에 표시됩니다.</p>
+        </div>
+        <div class="result-list" id="resultList"></div>
+      </section>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <span>전화상담</span>
+    <a href="tel:1644-9141">1644-9141</a>
+  </footer>
+
+  <script src="js/app.js"></script>
+  <script src="js/search.js"></script>
+</body>
+</html>
